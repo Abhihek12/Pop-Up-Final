@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="Style.css">
+
+
+</head>
+<body>
+
+<h2>Click to Pop up</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Stream</b></label>
+      <input type="text" placeholder="Stream" list="USER" name="uname">
+  <datalist id="USER">
+    <option value="FY-CS">
+    <option value="SY-CS">
+    <option value="TY-CS">
+  </datalist>
+
+      <label for="psw"><b>Year</b></label>
+      <input type="text" placeholder="Enter Year" list="Year" name="psw">
+  <datalist id="Year">
+    <option value="2019">
+    <option value="2018">
+    <option value="2017">
+  </datalist>
+      
+  <label for="psw"><b>From</b></label>
+      <input type="date" placeholder="Enter Year" list="Year" name="psw">
+  <datalist id="Year">
+    <option value="2019">
+    <option value="2018">
+    <option value="2017">
+  </datalist>
+
+  <label for="psw"><b>To</b></label>
+      <input type="date" placeholder="Enter Year" list="Year" name="psw">
+  <datalist id="Year">
+    <option value="2019">
+    <option value="2018">
+    <option value="2017">
+  </datalist>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">PDF</button>
+
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="Excel">Excel</button>
+  
+    </div>
+  </form>
+</div>
+<script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
+
+
+</body>
+</html>
